@@ -2,7 +2,7 @@ const zomato = require('zomato');
 const express=require('express');
 const app=express();
 const bodyParser=require('body-parser')
-const port=process.env.PORT || 8080;
+const PORT=process.env.PORT || 8080;
 
 app.set('view engine', 'ejs');
 
@@ -32,6 +32,6 @@ require('./routes/search')(search,client)
 
 
 
-app.listen(port,()=>{
-    console.log(`your app is listening at ${port}`)
+app.listen(PORT,()=>{
+    console.log(`your app is listening at ${PORT}`)
 })
